@@ -29,6 +29,46 @@ class Controller_Welcome extends Controller
 	 */
 	public function action_index()
 	{
+		// $view = View::forge('welcome/index');
+
+        $config = array(
+            'pagination_url' => 'pager/index',
+            'total_items'    => DB::count_records('users'),
+            'per_page'       => 5,
+            'uri_segment'    => 3,
+            'num_links'      => 5,
+            'template' => array(
+                'wrapper_start'           => '<ul class="pager"> ',
+                'wrapper_end'             => '</ul>',
+                'page_start'              => '',
+                'page_end'                => '',
+                'previous_start'          => '<li class="prev">',
+                'previous_end'            => '</li>',
+                'previous_inactive_start' => '<li class="prev">',
+                'previous_inactive_end'   => '</li>',
+                'previous_mark'           => '<< ',
+                'next_start'              => '<li class="next">',
+                'next_end'                => '</li>',
+                'next_inactive_start'     => '<li class=next">',
+                'next_inactive_end'       => '</li>',
+                'next_mark'               => ' >>',
+                'active_start'            => '<li><em>',
+                'active_end'              => '</em></li>',
+                'regular_start'           => '<li>',
+                'regular_end'             => '</li>'
+            )
+        );
+        Pagination::set_config($config);
+
+        $view->set_safe('pager', Pagination::create_links());
+
+        $data = DB::select()->from('users')
+                            ->limit(Pagination::$per_page)
+                            ->offset(Pagination::$offset)
+                            ->execute()
+                            ->as_array();
+
+        // return $view;
 		return Response::forge(View::forge('welcome/index'));
 	}
 

@@ -8,3 +8,4 @@ echo '<pre>';
 echo Fuel::VERSION . PHP_EOL;
 var_dump($GLOBALS);
 echo '</pre>';
+// 

@@ -1,6 +1,5 @@
 <ul class="nav nav-pills">
 	<li class='<?php echo Arr::get($subnav, "action1" ); ?>'><?php echo Html::anchor('setvalue/action1','Action1');?></li>
-
 </ul>
 <p>Action1</p>
 <?php

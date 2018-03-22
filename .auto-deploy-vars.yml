@@ -1,0 +1,4 @@
+domain: auto-deploy.x-point-1.net
+document_root: public/
+basic_auth_user: test_user
+basic_auth_passwd: test_pass

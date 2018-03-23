@@ -1,6 +1,12 @@
 ---
-domain: auto-deploy.x-point-1.net
-document_root: public/
+domain: auto-deploy.x-point-1.net # domain name, e.g. auto-deploy.x-point-1.net
+ssl: true # true or false
+document_root: public/ # relative path from project root, e.g. public/
 basic_auth_user: test_user
 basic_auth_passwd: test_pass
+mysql_dbs:
+  - test_db1
+mysql_users:
+  - {name: test_user1, passwd: test_pass1}
+  - {name: test_user2, passwd: test_pass2}
 ...

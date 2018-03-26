@@ -5,8 +5,7 @@ document_root: public/ # relative path from project root, e.g. public/
 basic_auth_user: test_user
 basic_auth_passwd: test_pass
 mysql_dbs:
-  - test_db1
+  - test_deploy
 mysql_users:
-  - {name: test_user1, passwd: test_pass1}
-  - {name: test_user2, passwd: test_pass2}
-...
+  - {name: test_deploy, passwd: test_deploy}
+-...

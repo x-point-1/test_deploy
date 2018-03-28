@@ -8,5 +8,5 @@ mysql_dbs:
   - test_deploy
 mysql_users:
   - {name: test_deploy, passwd: test_deploy}
-...
+-...
 

@@ -1,4 +1,6 @@
 ---
+domain: hoge.the-staging.tech # domain name, e.g. auto-deploy.x-point-1.net
+hoge.the-staging.tech
 ssl: true # true or false
 document_root: public/ # relative path from project root, e.g. public/
 basic_auth_user: test_user

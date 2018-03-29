@@ -1,11 +1,7 @@
 ---
-domain: hoge.the-staging.tech # domain name, e.g. auto-deploy.x-point-1.net
+domain: test.the-staging.tech # domain name, e.g. auto-deploy.the-staging.tech
 ssl: true # true or false
 document_root: public/ # relative path from project root, e.g. public/
 basic_auth_user: test_user
 basic_auth_passwd: test_pass
-mysql_dbs:
-  - test_deploy
-mysql_users:
-  - {name: test_deploy, passwd: test_deploy}
 ...

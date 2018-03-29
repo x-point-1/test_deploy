@@ -1,5 +1,5 @@
 ---
-domain: test5.the-staging.tech # domain name, e.g. auto-deploy.the-staging.tech
+domain:  aaaaaaaaa.the-staging.tech # domain name, e.g. auto-deploy.the-staging.tech
 ssl: true # true or false
 document_root: public/ # relative path from project root, e.g. public/
 basic_auth_user: test_user

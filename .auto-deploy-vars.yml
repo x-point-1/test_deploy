@@ -4,4 +4,5 @@ ssl: true # true or false
 document_root: public/ # relative path from project root, e.g. public/
 basic_auth_user: test_user
 basic_auth_passwd: test_pass
+
 ...
